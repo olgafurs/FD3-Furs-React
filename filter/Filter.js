@@ -8,58 +8,47 @@
 
   getInitialState: function () {
     return {
-      list_: this.props.list,        
-      checked: false,     
+      sortered: false,
+      filtered: "",
+      processStr: this.props.list,
     };
   },
 
+  selectedSort: function (EO) {    
+    this.setState( {sortered:EO.target.checked}, this.processList );    
+  },
 
-  selectedSort: function () {   
-    if (this.state.checked == false){
-    this.setState({ 
-      checked: true,     
-      list_:  this.state.list_.sort(),      
-    });
+  inputText: function (EO) {    
+    this.setState({ filtered: EO.target.value  }, this.processList);   
+  },
+
+  processList: function(){
     
-  } else {
-    this.setState({ 
-      checked: false,     
-      list_:  this.props.list,
-      
-    });   
-  };  
+    var res = this.props.list.slice();   
+
+    if( this.state.filtered){
+      res = res.filter(s => s.indexOf(this.state.filtered) > -1);
+    }
+    if( this.state.sortered){
+      res.sort();      
+    }
+
+    this.setState({ processStr: res});
+     
   },
 
   reset: function () {
     this.setState({ 
-      checked: false,     
-      list_:  this.props.list,      
-    });
-          
-    document.querySelectorAll('ul li').forEach(item => {     
-        item.style.display = "block";     
-    })
-
-   },
-
-   inputText: function (EO) {    
-    let filter = EO.target.value.toLowerCase();    
-    let filterElements = document.querySelectorAll('ul li');    
-    filterElements.forEach(item => {
-      if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    })
-   },
-
+      sortered: false,
+      filtered: "",
+      processStr: this.props.list,      
+    });  
+  },  
 
   render: function () {
 
     var listArr_ = [];
-
-    this.state.list_.forEach(function (item, index) {
+    this.state.processStr.forEach(function (item, index) {
       var item = item;
       var productCode =
         React.DOM.li({
@@ -81,14 +70,15 @@
           className: '',
           type: 'checkbox',
           name: 'checkbox',
-          checked: (this.state.checked),
-          onChange: (this.selectedSort),
+          checked: (this.state.sortered),
+          onClick: (this.selectedSort),
         }),
         React.DOM.input({
           className: '',
           type: 'text',
           name: 'text',
-          onKeyUp: this.inputText,
+          value: this.state.filtered,
+          onChange: this.inputText,
         }, ),
         React.DOM.input({
           className: '',
