@@ -1,0 +1,23 @@
+﻿.Product2 {
+  border: double gray 3px;
+  background-color: #F0F0F0;
+}
+
+.Product2 >.ProductName {
+  font-size: 18px;
+  font-family: 'Lobster', cursive;
+}
+
+.Product2 >.Photo {
+  display: block;
+}
+
+.Product2 >.Price,
+.Product2 >.Count {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Highlight {
+  background-color: pink;
+}
