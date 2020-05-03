@@ -8,42 +8,39 @@
 
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    products: React.PropTypes.array.isRequired
-
-    // products: React.PropTypes.arrayOf(
-    //   React.PropTypes.shape({
-    //     code: React.PropTypes.number.isRequired,
-    //     count: React.PropTypes.number.isRequired,
-    //     productName: React.PropTypes.string.isRequired,
-    //     price: React.PropTypes.string.isRequired,
-    //     urlPhoto: React.PropTypes.string.isRequired,
-    //   })
-    // )
+    products: React.PropTypes.array.isRequired    
   },
   
   getInitialState: function () {
     return {
       selectedItemId: 0,
-      // class: "Product2",   
+      items: this.props.products,       
     };
   },
 
   selectProduct: function(sel) {    
-    console.log(sel);
     this.setState({ selectedItemId: sel })
   }, 
+
+  deleteProduct: function(del) {    
+    var questionDelete = confirm("Вы хотите удалить товар?");
+    if (questionDelete) {     
+       var filteredItems = this.state.items.filter(s => s.code != del);
+       this.setState({ items: filteredItems });
+    }   
+  },
 
   render: function() {    
     
     var itemId = this.state.selectedItemId;
-       
-    var productsArr=this.props.products.map( function(v) {      
+
+    var productsArr=this.state.items.map( v => {      
      if (itemId == v.code) {      
       return React.createElement(Product2, {key:v.code, code:v.code, product: v.productName, 
-        price:v.price,  count: v.count, img:v.urlPhoto, class: 'Product2_', cbSelected:this.selectProduct } );
-    }else {
+        price:v.price,  count: v.count, img:v.urlPhoto, class: 'Product2_', cbSelected:this.selectProduct, cbDelete: this.deleteProduct } );
+    } else {
       return React.createElement(Product2, {key:v.code, code:v.code, product: v.productName, 
-        price:v.price,  count: v.count, img:v.urlPhoto, class: 'Product2', cbSelected:this.selectProduct } );
+        price:v.price,  count: v.count, img:v.urlPhoto, class: 'Product2', cbSelected:this.selectProduct, cbDelete: this.deleteProduct } );
     }    
        
   });
