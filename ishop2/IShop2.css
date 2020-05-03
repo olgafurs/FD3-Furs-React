@@ -22,3 +22,14 @@
   text-align: center;
   border: solid gray 2px;
 }
+
+.Product2 {
+  border: double gray 3px;
+  background-color: #F0F0F0;
+}
+
+.Product2_ {
+  border: double gray 3px;
+  background-color: rgb(250, 168, 229);
+}
+

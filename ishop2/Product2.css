@@ -21,3 +21,8 @@
 .Highlight {
   background-color: pink;
 }
+
+.Product2_ {
+  border: double gray 3px;
+  background-color: rgb(250, 168, 229);
+}
