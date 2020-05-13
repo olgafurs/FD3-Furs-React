@@ -1,0 +1,58 @@
+.IShop {
+  border: double gray 3px;
+  background-color: #F0F0F0;
+}
+
+.IShop>.nameIShop {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.IShop>.productsArr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.IShop>.productsArr>.Product2, .IShop>.productsArr>.Product2_ {
+  margin: 20px 40px;
+  padding: 20px;
+  text-align: center;
+  border: solid gray 2px;
+}
+
+
+
+.Product2 {  
+  background-color: #F0F0F0;
+}
+.Product2_ { 
+  background-color: rgb(250, 207, 239);
+}
+
+.Product2 >.ProductName, .Product2_ >.ProductName {
+  font-size: 18px;
+  font-family: 'Lobster', cursive;
+}
+
+.Product2 >.Photo, .Product2_ >.Photo  {
+  display: block;
+}
+
+.Product2 >.Price,
+.Product2 >.Count, 
+.Product2_ >.Price,
+.Product2_ >.Count  {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* .Product2_ {
+  border: double gray 3px;
+  background-color: rgb(250, 168, 229);
+} */
+/*# sourceMappingURL=bundle.css.map*/
