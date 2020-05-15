@@ -5,6 +5,7 @@ import './IShop3.css';
 
 import Product3 from './Product3';
 import CardProduct from './CardProduct';
+import NewAndEditProduct from './NewAndEditProduct';
 
 class IShop3 extends React.Component {  
 
@@ -52,13 +53,19 @@ class IShop3 extends React.Component {
 
   render() { 
     var cardProduct;
-    if( this.state.workMode == 2) {
-      cardProduct = 2;
-    } else if (this.state.workMode == 3) {
-      cardProduct = 3;
+    var itemId = this.state.selectedItemId;
+
+
+    if( this.state.workMode == 2) {      
+      cardProduct = <NewAndEditProduct code={0} product='newProd' price='newProd' count={0} img="newProd" workMode={this.state.workMode}/>
+
+    } else if (this.state.workMode == 3) {     
+
+
+      // cardProduct = <NewAndEditProduct code={1} product='v' price='kk' count={4} img="vv" workMode={this.state.workMode}/>
     }
     
-    var itemId = this.state.selectedItemId;
+    
    
     var productsArr=this.state.items.map( v => {      
      if (itemId == v.code && this.state.workMode ==1) { 

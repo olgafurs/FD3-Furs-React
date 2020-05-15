@@ -93,5 +93,31 @@
 
 
 
+.NewAndEditProduct {  
+  background-color: rgb(232, 238, 225);
+  border: solid 2px black;
+}
+
+
+.NewAndEditProduct span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  width: 150px;
+}
+
+
+.NewAndEditProduct input {
+  margin: 0 10px;
+}
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=bundle.css.map*/
