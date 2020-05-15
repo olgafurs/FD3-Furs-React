@@ -20,8 +20,18 @@
   margin: 20px 40px;
   padding: 20px;
   text-align: center;
-  border: solid gray 2px;
+  border: solid grey 2px;
 }
 
+.IShop>.ButtonNewProd {
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  border: solid rgba(128,128,128) 2px;  
+  box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+  font-size: 18px;
+}
 
 

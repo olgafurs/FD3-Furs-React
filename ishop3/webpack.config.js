@@ -10,7 +10,7 @@ module.exports = {
 
     entry: { main: "./src/App.js" }, // основной файл приложения
     output:{ 
-        path: path.resolve(__dirname, 'dist'), // путь к каталогу выходных файлов
+        path: __dirname, // путь к каталогу выходных файлов
         filename: "bundle.js"  // название создаваемого файла 
     }, 
     devtool:'source-map',
@@ -34,7 +34,7 @@ module.exports = {
                         loader: 'file-loader',
                         options:{
                             name: 'img/[name].[ext]',
-                            outputPath: './dist/img',
+                            outputPath: './img',
                             useRelativePath: true
                         }
                     },

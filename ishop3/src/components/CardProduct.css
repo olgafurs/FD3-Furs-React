@@ -1,0 +1,24 @@
+﻿.CardProduct {  
+  background-color: rgb(232, 238, 225);
+  border: solid 2px black;
+}
+
+
+.CardProduct >.ProductName {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.CardProduct >.Price,
+.CardProduct >.Count
+{
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+

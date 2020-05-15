@@ -22,6 +22,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.Product2 >.Button, .Product2_ >.Button {
+  width: 130px;
+  margin: 0 10px;
+}
+
 
 
 /* .Product2_ {

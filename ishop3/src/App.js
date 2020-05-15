@@ -9,7 +9,8 @@ let nameIShop = 'Цветочный интернет-магазин MyFavouriteF
 let productList = require('./products.json');
 
 ReactDOM.render( 
-  <IShop3 
+  <IShop3
+   startWorkMode = {1} 
    name = {nameIShop}
    products = {productList}
   />, document.getElementById('container')
