@@ -1,6 +1,9 @@
 ﻿.CardProduct {  
   background-color: rgb(232, 238, 225);
-  border: solid 2px black;
+  border: solid grey 2px;
+  width: 350px;
+  margin: 35px auto;
+  padding: 10px 40px;
 }
 
 
@@ -14,7 +17,7 @@
 .CardProduct >.Price,
 .CardProduct >.Count
 {
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
 }
 

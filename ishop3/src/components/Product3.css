@@ -12,6 +12,8 @@
 
 .Product2 >.Photo, .Product2_ >.Photo  {
   display: block;
+  width: 300px;
+  height: 200px;
 }
 
 .Product2 >.Price,

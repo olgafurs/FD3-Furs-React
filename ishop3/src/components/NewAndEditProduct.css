@@ -1,6 +1,9 @@
 ﻿.NewAndEditProduct {  
   background-color: rgb(232, 238, 225);
-  border: solid 2px black;
+  border: solid grey 2px;
+  width: 450px;
+  margin: 35px auto;
+  padding: 10px 40px;
 }
 
 
@@ -11,10 +14,19 @@
   font-family: 'Open Sans', sans-serif;
   width: 150px;
 }
+.NewAndEditProduct .blockBtnNewEdit {
+  display: flex;
+  justify-content: center;
+}
+
+.NewAndEditProduct .BtnNewEdit { 
+  width: 130px;
+}
 
 
 .NewAndEditProduct input {
   margin: 0 10px;
+  width: 250px;
 }
 
 

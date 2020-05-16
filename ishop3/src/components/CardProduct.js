@@ -16,7 +16,8 @@ class CardProduct extends React.Component {
 
   render() { 
     return (
-      <div className='CardProduct'>        
+      <div className='CardProduct'>
+        <h2>Данные товара</h2>        
         <p className='ProductName'>{this.props.product}</p>
         <p className='Price'>{this.props.price}</p>
         <p className='Count'>В наличии {this.props.count} букета(ов)</p>

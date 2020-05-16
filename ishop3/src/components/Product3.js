@@ -25,8 +25,9 @@ class Product3 extends React.Component {
     this.props.cbDelete(this.props.code);
   }
 
-  editBlockProduct = (EO) => {
+  editBlockProduct = (EO) => {    
     this.props.cbEdite(this.props.code);
+    EO.stopPropagation();
   }
 
   render() {     
