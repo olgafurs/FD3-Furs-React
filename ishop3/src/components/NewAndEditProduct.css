@@ -1,18 +1,21 @@
 ﻿.NewAndEditProduct {  
   background-color: rgb(232, 238, 225);
   border: solid grey 2px;
-  width: 450px;
+  max-width: 450px;
   margin: 35px auto;
   padding: 10px 40px;
 }
 
+.NewAndEditProduct h2 {  
+  text-align: center;
+}
 
-.NewAndEditProduct span {
+.NewAndEditProduct .LableInput {
   display: inline-block;
   margin: 0 10px;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
-  width: 150px;
+  width: 100px;
 }
 .NewAndEditProduct .blockBtnNewEdit {
   display: flex;
@@ -27,6 +30,12 @@
 .NewAndEditProduct input {
   margin: 0 10px;
   width: 250px;
+}
+
+.NewAndEditProduct .ValidMessage {
+  color: red;
+  font-size: 12px;
+  
 }
 
 

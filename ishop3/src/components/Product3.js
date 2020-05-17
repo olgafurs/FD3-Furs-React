@@ -8,7 +8,7 @@ class Product3 extends React.Component {
   static propTypes = { 
     code: PropTypes.number.isRequired, 
     product: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
     count: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,    
     class: PropTypes.string.isRequired, 
@@ -23,6 +23,7 @@ class Product3 extends React.Component {
 
   deleteBlockProduct = (EO) => {
     this.props.cbDelete(this.props.code);
+    EO.stopPropagation();
   }
 
   editBlockProduct = (EO) => {    
@@ -35,7 +36,7 @@ class Product3 extends React.Component {
       <div className={this.props.class} onClick={this.selectBlockProduct}>
         <img className='Photo' src= {this.props.img} />
         <p className='ProductName'>{this.props.product}</p>
-        <p className='Price'>{this.props.price}</p>
+        <p className='Price'>{this.props.price} руб.</p>
         <p className='Count'>В наличии {this.props.count} букета(ов)</p>
         <button className='Button' onClick={this.deleteBlockProduct}>Удалить</button>
         <button className='Button' onClick={this.editBlockProduct}>Редактировать</button>
