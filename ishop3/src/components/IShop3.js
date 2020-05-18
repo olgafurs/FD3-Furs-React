@@ -25,6 +25,9 @@ class IShop3 extends React.Component {
     workMode:this.props.startWorkMode, //1 - просмотр карточки. 2 - создание нового товара. 3 - редакирование товара.
     editProd:0,
     cardWasChanged:false,
+    stBtnDelete:false,
+    stBtnEdit:false,
+    stBtnNewProd:false
   } 
 
   selectProduct = (sel) => { 
@@ -41,13 +44,13 @@ class IShop3 extends React.Component {
        var filteredItems = this.state.items.filter(s => s.code != del);
        this.setState({ items: filteredItems });
     }
-   }   
+   }else{
+    this.setState({ stBtnDelete: true})
+  }   
   }
 
   createNewProduct = () => {
-    if(this.state.workMode != 3){
-    this.setState( {workMode:2} ); 
-    }    
+    this.setState( {stBtnNewProd: true, workMode:2} );       
   }
 
   saveNewProduct =(productName, price, count, urlPhoto)=> {
@@ -60,7 +63,7 @@ class IShop3 extends React.Component {
       };
      
       var addNewItem = this.state.items.concat(newProd);     
-       this.setState({ items: addNewItem, workMode:1, cardWasChanged:false  });  
+       this.setState({ items: addNewItem, workMode:1, cardWasChanged:false, stBtnNewProd: false, stBtnDelete:false, stBtnEdit:false });  
   }
 
   saveChanges =(code, productName, price, count, urlPhoto)=> {   
@@ -72,21 +75,22 @@ class IShop3 extends React.Component {
         v.urlPhoto = urlPhoto;
       }      
   })    
-    this.setState({ items: this.state.items, workMode:1, cardWasChanged:false });
+    this.setState({ items: this.state.items, workMode:1, cardWasChanged:false, stBtnNewProd: false, stBtnDelete:false, stBtnEdit:false });
   }
 
   editeProduct = (editeProdCode) => { 
+    this.setState({ stBtnDelete:true, stBtnNewProd: true })
     if(this.state.cardWasChanged ==false && this.state.workMode != 2){  
     this.setState( {workMode:3, editProd:editeProdCode, selectedItemId:editeProdCode } );
-    }       
+    }        
   }
 
   wasChanged = () => {    
-    this.setState( {cardWasChanged: true} );    
+    this.setState( {cardWasChanged: true, stBtnEdit:true } );    
   }
 
   cansel = () => {
-    this.setState( {workMode:4, cardWasChanged:false} );    
+    this.setState( {workMode:4, cardWasChanged:false, stBtnNewProd: false, stBtnDelete:false, stBtnEdit:false,} );    
   }
 
   render() { 
@@ -113,6 +117,8 @@ class IShop3 extends React.Component {
           cbSelected={this.selectProduct} 
           cbDelete={this.deleteProduct}
           cbEdite={this.editeProduct}
+          stBtnDelete={this.state.stBtnDelete}
+          stBtnEdit={this.state.stBtnEdit}
        />      
 
        
@@ -135,6 +141,8 @@ class IShop3 extends React.Component {
           cbSelected={this.selectProduct} 
           cbDelete={this.deleteProduct}
           cbEdite={this.editeProduct}
+          stBtnDelete={this.state.stBtnDelete}
+          stBtnEdit={this.state.stBtnEdit}
        />     
       )
    } else {
@@ -148,6 +156,8 @@ class IShop3 extends React.Component {
           cbSelected={this.selectProduct}
           cbDelete={this.deleteProduct}
           cbEdite={this.editeProduct}
+          stBtnDelete={this.state.stBtnDelete}
+          stBtnEdit={this.state.stBtnEdit}
         /> 
       );
     }    
@@ -157,7 +167,7 @@ class IShop3 extends React.Component {
       <div className='IShop'> 
         <div className= 'nameIShop'> {this.props.name} </div>
         <div className= 'productsArr'> {productsArr} </div>
-        <button className='ButtonNewProd' onClick = {this.createNewProduct}>Создать новый продукт</button>
+        <button className='ButtonNewProd' onClick = {this.createNewProduct} disabled={this.state.stBtnNewProd} >Создать новый продукт</button>
         <div> {cardProduct} </div>
       </div>
     );

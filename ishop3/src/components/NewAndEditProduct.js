@@ -26,7 +26,7 @@ class NewAndEditProduct extends React.Component {
     stPriceEdit: this.props.price,
     stCountEdit:this.props.count,
     stImgUrlEdit:this.props.img,
-    disabledSaveNewProd:false,
+    disabledSaveNewProd:true,
     disabledSaveEdit:false, 
     validMessageProductName:"",
     validMessagePrice:"",

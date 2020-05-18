@@ -15,7 +15,14 @@ class Product3 extends React.Component {
     cbSelected: PropTypes.func.isRequired, 
     cbDelete: PropTypes.func.isRequired,
     cbEdite: PropTypes.func.isRequired,
+    stBtnDelete: PropTypes.bool.isRequired,
+    stBtnEdit:PropTypes.bool.isRequired,
   }; 
+
+  // state = {
+  //   stBtnDelete: false,
+  //   stBtnEdit:false,
+  // }
 
   selectBlockProduct = (EO) => {
     this.props.cbSelected(this.props.code);
@@ -38,8 +45,8 @@ class Product3 extends React.Component {
         <p className='ProductName'>{this.props.product}</p>
         <p className='Price'>{this.props.price} руб.</p>
         <p className='Count'>В наличии {this.props.count} букета(ов)</p>
-        <button className='Button' onClick={this.deleteBlockProduct}>Удалить</button>
-        <button className='Button' onClick={this.editBlockProduct}>Редактировать</button>
+        <button className='Button' onClick={this.deleteBlockProduct} disabled={this.props.stBtnDelete}>Удалить</button>
+        <button className='Button' onClick={this.editBlockProduct} disabled={this.props.stBtnEdit}>Редактировать</button>
     </div>
     
     );  
