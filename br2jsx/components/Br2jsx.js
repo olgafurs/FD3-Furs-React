@@ -14,13 +14,19 @@ class Br2jsx  extends React.Component {
   render() {
     let re = /<br\s?\/?>/;
     let arr =this.props.text.split(re);
-    let arrLeng= arr.length*2-2;
+    // let arrLeng= arr.length*2-2;
 
-    for(var i = 0; i<arrLeng; i++){
-     arr.splice(++i, 0, <br/>)
+    // for(var i = 0; i<arrLeng; i++){
+    //  arr.splice(++i, 0, <br/>)
+    // }
+
+    let arr2 = [];
+    for(var i = 0; i<arr.length; i++){
+      arr2.push(arr[i]);
+      arr2.push(<br/>);
     }
     
-    let arrDiv = arr.map( (v, index) => {
+    let arrDiv = arr2.map( (v, index) => {
       return (        
         <Br2jsx2 key={index} element={v}/>    
      )
