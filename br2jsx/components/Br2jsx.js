@@ -23,15 +23,15 @@ class Br2jsx  extends React.Component {
     let arr2 = [];
     for(var i = 0; i<arr.length; i++){
       arr2.push(arr[i]);
-      arr2.push(<br/>);
+      arr2.push(<br key={i}/>);
     }
     
-    let arrDiv = arr2.map( (v, index) => {
-      return (        
-        <Br2jsx2 key={index} element={v}/>    
-     )
-  })
-  return <div className = "Br2jsx">{arrDiv}</div>
+  //   let arrDiv = arr2.map( (v, index) => {
+  //     return (        
+  //       <Br2jsx2 key={index} element={v}/>    
+  //    )
+  // })
+  return <div className ="Br2jsx" >{arr2}</div>
 
 }
 }
