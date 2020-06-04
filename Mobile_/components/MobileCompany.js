@@ -90,17 +90,24 @@ class MobileCompany extends React.PureComponent {
   }
 
   saveEditClient = (editClient) => {
-    this.state.clients.map( client => {
-      if(client.id == editClient.id) {
-        client.fam = editClient.fam;
-        client.im = editClient.im;
-        client.otch = editClient.otch;
-        client.balance = editClient.balance;
-      }
-      
-    }    
-  );
-    this.setState({ clients: this.state.clients, clientsFilt: this.state.clients, workMode:0 });
+    let changed=false;
+    let newClients=[...this.state.clients];
+    newClients.forEach( (c,i) => {
+        if ( c.id==editClient.id && ( c.fam != editClient.fam ||  c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance) ) {
+          let newClient={...c}; // копия хэша изменившегося клиента
+          newClient.fam = editClient.fam;
+          newClient.im = editClient.im;
+          newClient.otch = editClient.otch;
+          newClient.balance = editClient.balance;          
+          newClients[i]=newClient;
+          changed=true;
+        }
+      } );
+
+      if ( changed )
+          this.setState({clients:newClients, clientsFilt: newClients, workMode:0});
+
+    
 
   }
 

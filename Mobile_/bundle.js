@@ -29309,15 +29309,21 @@ var MobileCompany = function (_React$PureComponent) {
       var addNewClient = _this.state.clients.concat(newClient);
       _this.setState({ workMode: 0, clients: addNewClient, clientsFilt: addNewClient });
     }, _this.saveEditClient = function (editClient) {
-      _this.state.clients.map(function (client) {
-        if (client.id == editClient.id) {
-          client.fam = editClient.fam;
-          client.im = editClient.im;
-          client.otch = editClient.otch;
-          client.balance = editClient.balance;
+      var changed = false;
+      var newClients = [].concat(_toConsumableArray(_this.state.clients));
+      newClients.forEach(function (c, i) {
+        if (c.id == editClient.id && (c.fam != editClient.fam || c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance)) {
+          var newClient = _extends({}, c); // копия хэша изменившегося клиента
+          newClient.fam = editClient.fam;
+          newClient.im = editClient.im;
+          newClient.otch = editClient.otch;
+          newClient.balance = editClient.balance;
+          newClients[i] = newClient;
+          changed = true;
         }
       });
-      _this.setState({ clients: _this.state.clients, clientsFilt: _this.state.clients, workMode: 0 });
+
+      if (changed) _this.setState({ clients: newClients, clientsFilt: newClients, workMode: 0 });
     }, _this.showAllClients = function () {
       _this.setState({ clientsFilt: _this.state.clients });
     }, _this.showActiveClients = function () {
