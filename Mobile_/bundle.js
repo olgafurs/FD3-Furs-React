@@ -29312,7 +29312,9 @@ var MobileCompany = function (_React$PureComponent) {
       var changed = false;
       var newClients = [].concat(_toConsumableArray(_this.state.clients));
       newClients.forEach(function (c, i) {
-        if (c.id == editClient.id && (c.fam != editClient.fam || c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance)) {
+        // if (( c.id==editClient.id && c.fam != editClient.fam ) || (c.id==editClient.id && c.im != editClient.im) || (c.id==editClient.id && c.otch != editClient.otch) || (c.id==editClient.id && c.balance != editClient.balance))  {
+        // ( c.id==editClient.id && ( c.fam != editClient.fam || c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance) )
+        if (c.id == editClient.id && c.fam != editClient.fam || c.id == editClient.id && c.im != editClient.im || c.id == editClient.id && c.otch != editClient.otch || c.id == editClient.id && c.balance != editClient.balance) {
           var newClient = _extends({}, c); // копия хэша изменившегося клиента
           newClient.fam = editClient.fam;
           newClient.im = editClient.im;
@@ -29323,7 +29325,11 @@ var MobileCompany = function (_React$PureComponent) {
         }
       });
 
-      if (changed) _this.setState({ clients: newClients, clientsFilt: newClients, workMode: 0 });
+      if (changed) {
+        _this.setState({ clients: newClients, clientsFilt: newClients });
+      }
+
+      _this.setState({ workMode: 0 });
     }, _this.showAllClients = function () {
       _this.setState({ clientsFilt: _this.state.clients });
     }, _this.showActiveClients = function () {
@@ -30444,7 +30450,7 @@ var MobileClient = function (_React$PureComponent) {
           null,
           this.state.balance
         ),
-        this.state.balance >= 0 ? _react2.default.createElement(
+        this.state.balance > 0 ? _react2.default.createElement(
           'td',
           { className: 'MobileClientBalanceActive' },
           'active'
@@ -31156,7 +31162,7 @@ var NewAndEditClients = function (_React$PureComponent) {
               { className: 'LableInput' },
               '\u0411\u0430\u043B\u0430\u043D\u0441'
             ),
-            _react2.default.createElement('input', { type: 'text', defaultValue: '\u0411\u0430\u043B\u0430\u043D\u0441 \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u043B\u0438\u0435\u043D\u0442\u0430', ref: this.setNewBalanceRef })
+            _react2.default.createElement('input', { type: 'text', defaultValue: 0, ref: this.setNewBalanceRef })
           ),
           _react2.default.createElement(
             'p',

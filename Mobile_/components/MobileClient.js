@@ -48,7 +48,7 @@ class MobileClient extends React.PureComponent {
         <td>{this.state.FIO.otch}</td>
         <td>{this.state.balance}</td>
         {
-          (this.state.balance>=0)
+          (this.state.balance > 0)
           ?<td className='MobileClientBalanceActive'>active</td>
           :<td className='MobileClientBalanceBlocked'>blocked</td>
         }       

@@ -46,7 +46,7 @@ class NewAndEditClients extends React.PureComponent {
       let newIm=this.newImRef.value;
       let newOtch=this.newOtchRef.value;
       let newBalance=Number(this.newBalanceRef.value);
-      let editClient={id:this.props.client.id, fam:newFam, im:newIm, otch:newOtch, balance: newBalance };       
+      let editClient={id:this.props.client.id, fam:newFam, im:newIm, otch:newOtch, balance: newBalance };          
       voteEvents.emit('ESaveEditClient', editClient);
     }
   }
@@ -119,7 +119,7 @@ class NewAndEditClients extends React.PureComponent {
         </p>
         <p>
         <span className='LableInput'>Баланс</span> 
-        <input type="text" defaultValue="Баланс нового клиента" ref={this.setNewBalanceRef}/>
+        <input type="text" defaultValue={0} ref={this.setNewBalanceRef}/>
         </p>
         <p className="blockBtnNewEdit">
         <input type="button" className="BtnNewEdit" onClick={this.saveNewClient} value="Сохранить"/>

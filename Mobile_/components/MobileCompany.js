@@ -83,17 +83,18 @@ class MobileCompany extends React.PureComponent {
     this.setState( {workMode:0});
   }
 
-
   saveNewClient = (newClient) => {
     var addNewClient = this.state.clients.concat(newClient);  
     this.setState( {workMode:0, clients: addNewClient, clientsFilt: addNewClient,});
   }
 
-  saveEditClient = (editClient) => {
+  saveEditClient = (editClient) => {    
     let changed=false;
-    let newClients=[...this.state.clients];
+    let newClients=[...this.state.clients];   
     newClients.forEach( (c,i) => {
-        if ( c.id==editClient.id && ( c.fam != editClient.fam ||  c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance) ) {
+      // if (( c.id==editClient.id && c.fam != editClient.fam ) || (c.id==editClient.id && c.im != editClient.im) || (c.id==editClient.id && c.otch != editClient.otch) || (c.id==editClient.id && c.balance != editClient.balance))  {
+      // ( c.id==editClient.id && ( c.fam != editClient.fam || c.im != editClient.im || client.otch != editClient.otch || c.balance != editClient.balance) )
+        if (( c.id==editClient.id && c.fam != editClient.fam ) || (c.id==editClient.id && c.im != editClient.im) || (c.id==editClient.id && c.otch != editClient.otch) || (c.id==editClient.id && c.balance != editClient.balance))  {
           let newClient={...c}; // копия хэша изменившегося клиента
           newClient.fam = editClient.fam;
           newClient.im = editClient.im;
@@ -104,11 +105,11 @@ class MobileCompany extends React.PureComponent {
         }
       } );
 
-      if ( changed )
-          this.setState({clients:newClients, clientsFilt: newClients, workMode:0});
-
-    
-
+      if ( changed ){
+          this.setState({clients:newClients, clientsFilt: newClients});
+      }
+   
+      this.setState({workMode:0});
   }
 
 
