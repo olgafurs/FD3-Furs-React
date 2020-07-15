@@ -1,0 +1,17 @@
+﻿.ProjectImg { 
+  max-width: 700px;
+  max-height: 450px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;  
+}
+
+.ProjectName {
+ font-size: 26px;
+}
+
+.ProjectSpecification {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  
+}

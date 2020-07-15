@@ -1,0 +1,46 @@
+﻿.Message {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+  background-color: rgb(240, 240, 248);
+}
+
+.Input {
+  width: 320px;
+}
+
+.InputMessage {
+  width: 320px;
+  height: 100px;
+}
+
+.OrderTextarea {
+  width: 320px;
+  height: 100px; 
+}
+
+.InputSubmit {
+  display: block;
+  padding: 8px 30px;
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  background-color: rgba(103,58,183,0.1);
+  font-weight: 600;
+	color: #000;  
+  border: 2px solid rgba(103,58,183,0.1);	
+	border-radius: 3px;
+  text-decoration-line: none; 
+  cursor: pointer;
+}
+
+.InputSubmit:hover {
+  background-color: rgba(103,58,183,1);
+  color: #fff;
+}
+
+.InputTitle {
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

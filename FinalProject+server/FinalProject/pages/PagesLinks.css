@@ -1,0 +1,89 @@
+.MainMenu {
+   
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 25px; */
+}
+
+.MainMenu_ {   
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.PageLink {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 18px;
+    color: #337ab7;
+    text-decoration: none;
+    margin: 0 40px; 
+    vertical-align: middle;  
+}
+
+.PageLinkReg {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 14px;
+    color: #337ab7;
+    text-decoration: none;
+    margin: 10px 30px; 
+    vertical-align: middle;  
+    cursor: pointer;
+    text-align: center;
+}
+
+.Profile {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 14px;
+    font-weight: 700;
+    color: #337ab7;   
+    vertical-align: middle;   
+    text-align: center;
+}
+
+.PageLinkReg:hover {
+    text-decoration: underline;
+}
+
+.PageLinkLogo {
+    width: 180px;
+	height: 70px;
+}
+
+.ActivePageLink {
+    font-weight: bold;
+}
+
+.EnterBtn {   
+    background-color: #fdc900;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+    color: #337ab7;
+    padding: 6px 16px;
+    border: 2px solid #fdc900;	
+    border-radius: 3px;
+    text-decoration-line: none;   
+    cursor: pointer;
+    text-align: center;
+    /* margin-top: 10px;  */
+}
+
+.EnterBtn:hover {
+    color: #24415a;
+}
+
+.Tel {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+}

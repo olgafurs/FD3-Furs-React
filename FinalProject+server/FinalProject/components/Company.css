@@ -1,0 +1,22 @@
+﻿h1 {
+  text-align: center;
+}
+.Company {
+  display: flex;
+  justify-content: center;
+}
+
+.ImgAboutCompany {
+  max-width: 550px;
+  max-height: 350px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+}
+
+.AboutCompany {
+  max-width: 600px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 20px 0 0;
+  line-height: 1.4;
+}

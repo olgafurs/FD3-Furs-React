@@ -1,0 +1,29 @@
+﻿.ServiceContainer {
+  width: 370px;
+  margin: 20px;
+  text-align: center;
+}
+.ServiceImg
+{  
+  width: 350px;
+  height: 230px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;  
+}
+
+.ServiceName {
+ font-size: 18px;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+ text-decoration: none;
+ color: #337ab7;
+}
+
+.ServiceName:hover {   
+  text-decoration: underline;
+  
+ }
+
+.ServiceSpecification {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+}

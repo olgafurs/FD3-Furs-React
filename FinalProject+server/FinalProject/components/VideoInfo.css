@@ -1,0 +1,12 @@
+﻿.VideoInfoContainer {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.Iframe {
+  width: 600px;
+  height: 400px;
+  border: 0;
+
+}

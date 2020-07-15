@@ -1,0 +1,64 @@
+﻿.CommentContainer
+{
+  max-width: 1000px;
+  margin: auto;
+
+}
+.CommentTextareaTitle {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 18px;
+  color: #337ab7;
+}
+
+.CommentTextarea {
+  width: 400px;
+  height: 80px;
+}
+
+.CommentName {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.CommentBtn {   
+  background-color: #fdc900;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+  color: #337ab7;
+  padding: 6px 16px;
+  border: 2px solid #fdc900;	
+  border-radius: 3px;
+  text-decoration-line: none;   
+  cursor: pointer;
+  text-align: center;
+  /* margin-top: 10px;  */
+}
+
+.ValidMessage {
+  color: red;
+
+}
+/* ////////////////////////////////////////// */
+
+.item-enter {
+  opacity: 0;
+}
+
+.item-enter-active {
+  opacity: 1; 
+  transition: opacity 500ms ease-in;
+}
+
+.item-exit {
+  opacity: 1;
+ 
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+/* ////////////////////////////////////////// */

@@ -1,0 +1,38 @@
+.MainPage {   
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+}
+
+.MainTitle {
+  max-width: 600px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+  margin: 0;
+}
+
+.OrderBtn {
+  background-color: #fdc900;
+  font-size: 20px;
+  font-weight: 600;
+	color: #337ab7;
+  padding: 12px 44px;
+  border: 2px solid #fdc900;	
+	border-radius: 3px;
+  text-decoration-line: none;
+  margin-top: 20px;
+  cursor: pointer;
+  
+}
+
+.OrderBtn:hover {
+  color: #24415a;
+}
+
+.MainPageImg {
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%; 
+}

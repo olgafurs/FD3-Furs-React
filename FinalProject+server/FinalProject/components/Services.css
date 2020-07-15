@@ -1,0 +1,18 @@
+﻿.ServicesContainer
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.Services {
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+

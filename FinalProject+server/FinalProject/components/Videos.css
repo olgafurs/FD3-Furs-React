@@ -1,0 +1,11 @@
+﻿.VideosContainer
+{
+ margin: auto;
+ padding: 20px;
+ border: 2px solid  rgb(230, 230, 250);
+ border-radius: 2%;
+ max-width: 800px;
+ background-color: rgb(240, 240, 248);
+}
+
+

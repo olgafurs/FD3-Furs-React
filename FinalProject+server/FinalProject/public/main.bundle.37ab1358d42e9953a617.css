@@ -1,0 +1,564 @@
+.MainPage {   
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+}
+
+.MainTitle {
+  max-width: 600px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+  margin: 0;
+}
+
+.OrderBtn {
+  background-color: #fdc900;
+  font-size: 20px;
+  font-weight: 600;
+	color: #337ab7;
+  padding: 12px 44px;
+  border: 2px solid #fdc900;	
+	border-radius: 3px;
+  text-decoration-line: none;
+  margin-top: 20px;
+  cursor: pointer;
+  
+}
+
+.OrderBtn:hover {
+  color: #24415a;
+}
+
+.MainPageImg {
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%; 
+}h1 {
+  text-align: center;
+}
+.Company {
+  display: flex;
+  justify-content: center;
+}
+
+.ImgAboutCompany {
+  max-width: 550px;
+  max-height: 350px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+}
+
+.AboutCompany {
+  max-width: 600px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 20px 0 0;
+  line-height: 1.4;
+}.ServiceContainer {
+  width: 370px;
+  margin: 20px;
+  text-align: center;
+}
+.ServiceImg
+{  
+  width: 350px;
+  height: 230px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;  
+}
+
+.ServiceName {
+ font-size: 18px;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+ text-decoration: none;
+ color: #337ab7;
+}
+
+.ServiceName:hover {   
+  text-decoration: underline;
+  
+ }
+
+.ServiceSpecification {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+}.ServicesContainer
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.Services {
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.ServiceInfoContainer
+{
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.ServiceInfoContainerData {
+  margin-right: 30px;
+}
+
+.ServiceInfoName {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ServiceInfoSpecification {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 18px;
+}
+
+.ServiceInfoOrder {
+  background-color: #fdc900;
+  font-size: 18px;
+  font-weight: 600;
+	color: #337ab7;
+  padding: 12px 34px;
+  border: 2px solid #fdc900;	
+	border-radius: 3px;
+  text-decoration-line: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.ServiceInfoOrder:hover {
+  color: #24415a;
+}
+
+
+.ServiceInfoImg
+{
+ display: block;
+ width: 555px;
+ border: 2px solid  rgb(230, 230, 250);
+ border-radius: 2%;
+
+}
+
+
+.ProjectImg { 
+  max-width: 700px;
+  max-height: 450px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;  
+}
+
+.ProjectName {
+ font-size: 26px;
+}
+
+.ProjectSpecification {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  
+}.Projects
+{
+  max-width: 1300px;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+
+/* .VideoContainer {
+  text-align: center;
+} */
+
+.VideoContainerP {
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.VideosContainer
+{
+ margin: auto;
+ padding: 20px;
+ border: 2px solid  rgb(230, 230, 250);
+ border-radius: 2%;
+ max-width: 800px;
+ background-color: rgb(240, 240, 248);
+}
+
+
+.VideoInfoContainer {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.Iframe {
+  width: 600px;
+  height: 400px;
+  border: 0;
+
+}.CommentContainer
+{
+  max-width: 1000px;
+  margin: auto;
+
+}
+.CommentTextareaTitle {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 18px;
+  color: #337ab7;
+}
+
+.CommentTextarea {
+  width: 400px;
+  height: 80px;
+}
+
+.CommentName {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.CommentBtn {   
+  background-color: #fdc900;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+  color: #337ab7;
+  padding: 6px 16px;
+  border: 2px solid #fdc900;	
+  border-radius: 3px;
+  text-decoration-line: none;   
+  cursor: pointer;
+  text-align: center;
+  /* margin-top: 10px;  */
+}
+
+.ValidMessage {
+  color: red;
+
+}
+/* ////////////////////////////////////////// */
+
+.item-enter {
+  opacity: 0;
+}
+
+.item-enter-active {
+  opacity: 1; 
+  transition: opacity 500ms ease-in;
+}
+
+.item-exit {
+  opacity: 1;
+ 
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+/* ////////////////////////////////////////// *//* .Facebook {
+  color: green;
+}
+
+.Linkedin {
+  color: green;
+}
+
+.Viber {
+  color: green;
+}
+
+.Skype {
+  color: green;
+} */
+
+.Contacts {
+  width: 500px;
+}
+
+.ContactsTitle {
+  font-size: 24px;  
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ContactsData {
+  font-size: 18px;  
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.SocialIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.Map {
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+}.Message {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+  background-color: rgb(240, 240, 248);
+}
+
+.Input {
+  width: 320px;
+}
+
+.InputMessage {
+  width: 320px;
+  height: 100px;
+}
+
+.OrderTextarea {
+  width: 320px;
+  height: 100px; 
+}
+
+.InputSubmit {
+  display: block;
+  padding: 8px 30px;
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  background-color: rgba(103,58,183,0.1);
+  font-weight: 600;
+	color: #000;  
+  border: 2px solid rgba(103,58,183,0.1);	
+	border-radius: 3px;
+  text-decoration-line: none; 
+  cursor: pointer;
+}
+
+.InputSubmit:hover {
+  background-color: rgba(103,58,183,1);
+  color: #fff;
+}
+
+.InputTitle {
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}.ContactsContainer {
+  max-width: 1000px;
+  display: flex;
+  margin: auto;
+}.Order {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+  background-color: rgb(240, 240, 248);
+}
+
+.OrderTitle { 
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+.OrderInput {
+  width: 320px; 
+}
+
+.OrderSelect {
+  width: 328px;
+  padding: 1px;
+  border-width: 2px;
+ 
+}
+.OrderSelect > option {  
+  font-size: 15px;
+  height: 21px;
+}
+
+
+.OrderInputSubmit {
+  display: block;
+  padding: 8px 30px;
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  background-color: rgba(103,58,183,0.1);
+  font-weight: 600;
+	color: #000;  
+  border: 2px solid rgba(103,58,183,0.1);	
+	border-radius: 3px;
+  text-decoration-line: none; 
+  cursor: pointer;
+}
+
+.OrderInputSubmit:hover {
+  background-color: rgba(103,58,183,1);
+  color: #fff;
+}
+
+.ValidMessage {
+  color: red;
+}
+
+.SuccessfulnContainer
+{
+  max-width: 1000px;  
+  margin: auto;
+  padding: 50px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  color: #337ab7;
+ 
+}
+.OrderContainer {
+  max-width: 500px; 
+  margin: auto;
+}.SignUpContainer
+{
+    width: 500px;
+    padding: 20px;
+    border: 2px solid  rgb(230, 230, 250);
+    border-radius: 2%;
+    background-color: rgb(240, 240, 248);
+ 
+}
+.RegistrationContainer
+{
+  max-width: 500px;  
+  margin: auto;
+ 
+}
+.SignInContainer
+{
+    width: 500px;
+    padding: 20px;
+    border: 2px solid  rgb(230, 230, 250);
+    border-radius: 2%;
+    background-color: rgb(240, 240, 248);
+ 
+}
+
+
+.RegistrationContainer
+{
+  max-width: 500px;  
+  margin: auto;
+ 
+}
+.SuccessfulnContainer
+{
+  max-width: 1000px;  
+  margin: auto;
+  padding: 50px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  color: #337ab7;
+ 
+}
+.MainMenu {
+   
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 25px; */
+}
+
+.MainMenu_ {   
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.PageLink {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 18px;
+    color: #337ab7;
+    text-decoration: none;
+    margin: 0 40px; 
+    vertical-align: middle;  
+}
+
+.PageLinkReg {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 14px;
+    color: #337ab7;
+    text-decoration: none;
+    margin: 10px 30px; 
+    vertical-align: middle;  
+    cursor: pointer;
+    text-align: center;
+}
+
+.Profile {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-size: 14px;
+    font-weight: 700;
+    color: #337ab7;   
+    vertical-align: middle;   
+    text-align: center;
+}
+
+.PageLinkReg:hover {
+    text-decoration: underline;
+}
+
+.PageLinkLogo {
+    width: 180px;
+	height: 70px;
+}
+
+.ActivePageLink {
+    font-weight: bold;
+}
+
+.EnterBtn {   
+    background-color: #fdc900;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+    color: #337ab7;
+    padding: 6px 16px;
+    border: 2px solid #fdc900;	
+    border-radius: 3px;
+    text-decoration-line: none;   
+    cursor: pointer;
+    text-align: center;
+    /* margin-top: 10px;  */
+}
+
+.EnterBtn:hover {
+    color: #24415a;
+}
+
+.Tel {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
+}
+/*# sourceMappingURL=main.bundle.37ab1358d42e9953a617.css.map*/

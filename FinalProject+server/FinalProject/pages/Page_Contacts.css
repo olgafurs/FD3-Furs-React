@@ -1,0 +1,5 @@
+.ContactsContainer {
+  max-width: 1000px;
+  display: flex;
+  margin: auto;
+}

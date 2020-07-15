@@ -1,0 +1,64 @@
+﻿.Order {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid  rgb(230, 230, 250);
+  border-radius: 2%;
+  background-color: rgb(240, 240, 248);
+}
+
+.OrderTitle { 
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+.OrderInput {
+  width: 320px; 
+}
+
+.OrderSelect {
+  width: 328px;
+  padding: 1px;
+  border-width: 2px;
+ 
+}
+.OrderSelect > option {  
+  font-size: 15px;
+  height: 21px;
+}
+
+
+.OrderInputSubmit {
+  display: block;
+  padding: 8px 30px;
+  font-size: 18px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  background-color: rgba(103,58,183,0.1);
+  font-weight: 600;
+	color: #000;  
+  border: 2px solid rgba(103,58,183,0.1);	
+	border-radius: 3px;
+  text-decoration-line: none; 
+  cursor: pointer;
+}
+
+.OrderInputSubmit:hover {
+  background-color: rgba(103,58,183,1);
+  color: #fff;
+}
+
+.ValidMessage {
+  color: red;
+}
+
+.SuccessfulnContainer
+{
+  max-width: 1000px;  
+  margin: auto;
+  padding: 50px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  color: #337ab7;
+ 
+}

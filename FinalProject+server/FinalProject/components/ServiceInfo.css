@@ -1,0 +1,52 @@
+﻿.ServiceInfoContainer
+{
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.ServiceInfoContainerData {
+  margin-right: 30px;
+}
+
+.ServiceInfoName {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ServiceInfoSpecification {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+  font-size: 18px;
+}
+
+.ServiceInfoOrder {
+  background-color: #fdc900;
+  font-size: 18px;
+  font-weight: 600;
+	color: #337ab7;
+  padding: 12px 34px;
+  border: 2px solid #fdc900;	
+	border-radius: 3px;
+  text-decoration-line: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.ServiceInfoOrder:hover {
+  color: #24415a;
+}
+
+
+.ServiceInfoImg
+{
+ display: block;
+ width: 555px;
+ border: 2px solid  rgb(230, 230, 250);
+ border-radius: 2%;
+
+}
+
+
